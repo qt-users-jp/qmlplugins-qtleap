@@ -1,0 +1,9 @@
+$ git clone git://git.qtquick.me/qmlplugins/leapmotion.git
+$ cd leapmotion
+$ qmake
+$ make
+$ (sudo) make install
+$ qmlscene ./examples/examples.qml
+
+contributions are always welcome!
+see http://qtquick.me/ for details

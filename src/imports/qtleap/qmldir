@@ -1,0 +1,3 @@
+module QtLeap
+plugin declarative_leap
+typeinfo plugins.qmltypes

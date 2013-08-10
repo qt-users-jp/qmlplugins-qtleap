@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>leap3d.qml</file>
+    </qresource>
+</RCC>

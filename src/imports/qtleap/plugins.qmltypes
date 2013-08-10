@@ -1,0 +1,77 @@
+import QtQuick.tooling 1.1
+
+// This file describes the plugin-supplied types contained in the library.
+// It is used for QML tooling purposes only.
+//
+// This file was auto-generated with the command '/home/tasuku/org/qt-project/qt5/debug/qtbase/bin/qmlplugindump QtFluentd 0.1'.
+
+Module {
+    Component {
+        name: "QFluentd"
+        prototype: "QObject"
+        exports: ["Fluentd 0.1"]
+        Enum {
+            name: "ConnectionState"
+            values: {
+                "UnconnectedState": 0,
+                "HostLookupState": 1,
+                "ConnectingState": 2,
+                "ConnectedState": 3,
+                "ClosingState": 6
+            }
+        }
+        Enum {
+            name: "ConnectionType"
+            values: {
+                "TcpSocket": 0,
+                "UnixDomainSocket": 1
+            }
+        }
+        Property { name: "connectionState"; type: "ConnectionState" }
+        Property { name: "connectionType"; type: "ConnectionType" }
+        Property { name: "host"; type: "string" }
+        Property { name: "port"; type: "int" }
+        Property { name: "socket"; type: "string" }
+        Signal {
+            name: "connectionStateChanged"
+            Parameter { name: "connectionState"; type: "ConnectionState" }
+        }
+        Signal {
+            name: "connectionTypeChanged"
+            Parameter { name: "connectionType"; type: "ConnectionType" }
+        }
+        Signal {
+            name: "hostChanged"
+            Parameter { name: "host"; type: "string" }
+        }
+        Signal {
+            name: "portChanged"
+            Parameter { name: "port"; type: "int" }
+        }
+        Signal {
+            name: "socketChanged"
+            Parameter { name: "socket"; type: "string" }
+        }
+        Method {
+            name: "setConnectionType"
+            Parameter { name: "connectionType"; type: "ConnectionType" }
+        }
+        Method {
+            name: "setHost"
+            Parameter { name: "host"; type: "string" }
+        }
+        Method {
+            name: "setPort"
+            Parameter { name: "port"; type: "int" }
+        }
+        Method {
+            name: "setSocket"
+            Parameter { name: "socket"; type: "string" }
+        }
+        Method {
+            name: "send"
+            Parameter { name: "tag"; type: "string" }
+            Parameter { name: "value"; type: "QJsonObject" }
+        }
+    }
+}
